@@ -29,7 +29,7 @@ const Projects: Component = () => {
       tech: ["Solid-js", "CSS", "Firebase", "After Effect"],
       image: "game",
       github: "https://github.com/yourusername/urai",
-      vercel: "https://urai.vercel.app"
+      vercel: "https://uraiix.vercel.app"
     },
     {
       id: 3,
