@@ -1,0 +1,65 @@
+[debug] [2025-04-25T11:04:50.141Z] ----------------------------------------------------------------------
+[debug] [2025-04-25T11:04:50.143Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gefro\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-04-25T11:04:50.143Z] CLI Version:   14.2.1
+[debug] [2025-04-25T11:04:50.143Z] Platform:      win32
+[debug] [2025-04-25T11:04:50.143Z] Node Version:  v22.11.0
+[debug] [2025-04-25T11:04:50.144Z] Time:          Fri Apr 25 2025 18:04:50 GMT+0700 (Western Indonesia Time)
+[debug] [2025-04-25T11:04:50.144Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-25T11:04:50.149Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-25T11:04:50.150Z] > authorizing via signed-in user (fawwazaziz96s@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\portofolioku_rais
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-04-25T11:04:57.850Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:04:57.850Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:04:57.851Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-04-25T11:04:58.461Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-04-25T11:04:58.461Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project portofolio-464f8 (PORTOFOLIO) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-04-25T11:04:59.676Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:04:59.676Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:04:59.676Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/portofolio-464f8/billingInfo [none]
+[debug] [2025-04-25T11:05:01.002Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/portofolio-464f8/billingInfo 200
+[debug] [2025-04-25T11:05:01.002Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/portofolio-464f8/billingInfo {"name":"projects/portofolio-464f8/billingInfo","projectId":"portofolio-464f8","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-04-25T11:05:01.003Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:05:01.003Z] Checked if tokens are valid: true, expires at: 1745580408541
+[debug] [2025-04-25T11:05:01.003Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/portofolio-464f8/services/sqladmin.googleapis.com [none]
+[debug] [2025-04-25T11:05:01.003Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/portofolio-464f8/services/sqladmin.googleapis.com x-goog-quota-user=projects/portofolio-464f8
+[debug] [2025-04-25T11:05:02.356Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/portofolio-464f8/services/sqladmin.googleapis.com 200
+[debug] [2025-04-25T11:05:02.356Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/portofolio-464f8/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] i  dataconnect\connector\connector.yaml is unchanged 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] +  Detected WEB app in directory D:\portofolioku_rais 
+[info] i  Writing your new SDK configuration to D:\portofolioku_rais\dataconnect\connector/connector.yaml 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[debug] [2025-04-25T11:05:07.166Z] defaultcredentials: writing to file C:\Users\gefro\AppData\Roaming\firebase\fawwazaziz96s_gmail_com_application_default_credentials.json
+[debug] [2025-04-25T11:05:07.167Z] Setting GAC to C:\Users\gefro\AppData\Roaming\firebase\fawwazaziz96s_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"dataconnect"},"message":"Setting GAC to C:\\Users\\gefro\\AppData\\Roaming\\firebase\\fawwazaziz96s_gmail_com_application_default_credentials.json"}}
+[info] I0425 18:05:07.301551    9836 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "D:\\portofolioku_rais\\dataconnect-generated\\js\\default-connector"
+I0425 18:05:07.303757    9836 generate.go:40] Generated all sources. Writing them to disk...
+I0425 18:05:07.306074    9836 collector.go:107] connector "default" javascriptSdk wrote into "D:\\portofolioku_rais\\dataconnect-generated\\js\\default-connector"
+Generated sources: index.d.ts [246B] esm\index.esm.js [119B] esm\package.json [17B] index.cjs.js [154B] package.json [634B] README.md [2774B] 
+I0425 18:05:07.330568    9836 installsdk.go:80] Running command: C:\Users\gefro\AppData\Roaming\npm\pnpm.cmd link dataconnect-generated\js\default-connector
+
