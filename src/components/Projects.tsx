@@ -1,5 +1,11 @@
 import { Component, createSignal } from 'solid-js';
 
+
+import xirentVideo from '../assets/xirentp.mp4';
+import gambarUrai from '../assets/calcu.png';
+import gambarLaundry from '../assets/mockup.png';
+import gambarCalcu from '../assets/calcu.png';
+
 interface Project {
   id: number;
   title: string;
@@ -18,7 +24,7 @@ const Projects: Component = () => {
       title: "XIIRENT (Applikasi Booking Warnet)",
       description: "Aplikasi mobile untuk pemesanan tempat di warnet secara real-time, dilengkapi fitur pemilihan kursi, jadwal, dan sistem notifikasi.",
       tech: ["React-native", "Rust", "After Effect", "Blender"],
-      video: "/xirentp.mp4", // perbaiki jadi ambil dari /public
+      video: xirentVideo, // Langsung dari import
       github: "https://github.com/yourusername/xiirent",
     },
     {
@@ -26,7 +32,7 @@ const Projects: Component = () => {
       title: "URAI",
       description: "Platform digital untuk mengelola sampah secara terorganisir dan meningkatkan kesadaran lingkungan.",
       tech: ["Solid-js", "CSS", "Firebase", "After Effect"],
-      image: "/game.png",
+      image: gambarUrai,
       github: "https://github.com/yourusername/urai",
       vercel: "https://uraiix.vercel.app",
     },
@@ -35,7 +41,7 @@ const Projects: Component = () => {
       title: "Laundry Management-APP",
       description: "Aplikasi untuk membantu pengelolaan pelanggan laundry dengan nota digital dan print Bluetooth.",
       tech: ["React Native", "Firebase"],
-      image: "/mockup.png",
+      image: gambarLaundry,
       github: "https://github.com/Floostz/SalamoenLaundryAPP",
     },
     {
@@ -43,7 +49,7 @@ const Projects: Component = () => {
       title: "Rais.Calcu",
       description: "Kalkulator lengkap menggunakan Solid.js dan Firebase.",
       tech: ["Solid-js", "CSS", "Firebase"],
-      image: "/calcu.png",
+      image: gambarCalcu,
       github: "https://github.com/Floostz/fawazcalcu",
       vercel: "https://fawazcalcu-ujak.vercel.app/",
     }
