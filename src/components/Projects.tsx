@@ -1,4 +1,8 @@
 import { Component, createSignal } from 'solid-js';
+import videoxirrent from '../assets/xirentp.mp4'
+import gambaruraia from '../assets/calcu.png'
+import gambarcalcu from '../assets/calcu.png'
+import gambarlaundry from '../assets/mockup.png'
 
 interface Project {
   id: number;
@@ -70,7 +74,7 @@ const Projects: Component = () => {
                 ></video>
               ) : (
                 <img
-                  src={`src/assets/${project.image}.png`}
+                  src={`/assets/${project.image}.png`}
                   alt={project.title}
                   class="project-img"
                 />

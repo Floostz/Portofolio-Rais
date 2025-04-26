@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import profileImage from '../assets/fawwaz.jpg';
+import profileImage from '/assets/fawwaz.jpg'
 const About: Component = () => {
   return (
     <div class="about-container">
