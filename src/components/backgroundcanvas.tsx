@@ -45,31 +45,175 @@ const BackgroundCanvas: Component = () => {
     const starContainer = document.querySelector('.stars-container');
     if (!starContainer) return;
 
-    for (let i = 0; i < 100; i++) {
+    // Create different types of stars with varied animations
+    for (let i = 0; i < 150; i++) {
       const star = document.createElement('div');
       star.className = 'star';
+      
+      // Random position
       star.style.top = `${Math.random() * 100}%`;
       star.style.left = `${Math.random() * 100}%`;
-      star.style.width = `${Math.random() * 2 + 1}px`;
-      star.style.height = star.style.width;
-      star.style.animationDelay = `${Math.random() * 5}s`;
+      
+      // Random size (smaller range for more realistic stars)
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      
+      // Random animation delay
+      star.style.animationDelay = `${Math.random() * 8}s`;
+      
+      // Random animation duration for twinkling
+      star.style.animationDuration = `${Math.random() * 5 + 3}s`;
+      
+      // Add different animation types
+      const animationType = Math.floor(Math.random() * 3);
+      if (animationType === 0) {
+        star.classList.add('twinkle');
+      } else if (animationType === 1) {
+        star.classList.add('pulse');
+      } else {
+        star.classList.add('drift');
+        
+        // Add random drift direction
+        const driftX = (Math.random() - 0.5) * 20;
+        const driftY = (Math.random() - 0.5) * 20;
+        star.style.setProperty('--drift-x', `${driftX}px`);
+        star.style.setProperty('--drift-y', `${driftY}px`);
+      }
+      
       starContainer.appendChild(star);
     }
+    
+    // Add some shooting stars
+    for (let i = 0; i < 5; i++) {
+      const shootingStar = document.createElement('div');
+      shootingStar.className = 'shooting-star';
+      
+      // Position shooting stars
+      shootingStar.style.top = `${Math.random() * 60}%`;
+      shootingStar.style.left = `${Math.random() * 100}%`;
+      
+      // Random animation delay and duration
+      shootingStar.style.animationDelay = `${Math.random() * 15}s`;
+      shootingStar.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      
+      starContainer.appendChild(shootingStar);
+    }
   };
-///
+
   return (
     <div class="webgl-background">
       <div class="stars-container"></div>
       <div class="black-hole-container">
-      <video class="black-hole-video" autoplay loop muted playsinline>
-  <source src={blackholeWebm} type="video/webm" />
-
-  Your browser does not support the video tag.
-</video>
-
+        <video class="black-hole-video" autoplay loop muted playsinline>
+          <source src={blackholeWebm} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div class="cosmic-effect"></div>
       <div class="background-icons"></div>
+      
+      <style>
+      {`
+        .stars-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .star {
+          position: absolute;
+          background-color: #ffffff;
+          border-radius: 50%;
+          z-index: 1;
+        }
+        
+        .twinkle {
+          animation: twinkle linear infinite;
+        }
+        
+        .pulse {
+          animation: pulse linear infinite;
+        }
+        
+        .drift {
+          animation: drift linear infinite;
+        }
+        
+        .shooting-star {
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background-color: #ffffff;
+          transform: rotate(-45deg);
+          z-index: 2;
+          opacity: 0;
+          animation: shoot linear infinite;
+        }
+        
+        .shooting-star::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 60px;
+          height: 1px;
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+          transform-origin: left center;
+        }
+        
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.1; }
+          50% { opacity: 0.9; }
+        }
+        
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); opacity: 0.6; }
+          50% { transform: scale(1.5); opacity: 1; }
+        }
+        
+        @keyframes drift {
+          0% { 
+            transform: translate(0, 0); 
+            opacity: 0.6;
+          }
+          25% {
+            opacity: 1;
+          }
+          50% {
+            transform: translate(var(--drift-x, 10px), var(--drift-y, 10px));
+            opacity: 0.8;
+          }
+          75% {
+            opacity: 0.4;
+          }
+          100% { 
+            transform: translate(0, 0);
+            opacity: 0.6;
+          }
+        }
+        
+        @keyframes shoot {
+          0% {
+            transform: translateX(0) translateY(0) rotate(-45deg);
+            opacity: 0;
+          }
+          5% {
+            opacity: 1;
+          }
+          20% {
+            transform: translateX(-100px) translateY(100px) rotate(-45deg);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(-100px) translateY(100px) rotate(-45deg);
+            opacity: 0;
+          }
+        }
+      `}
+      </style>
     </div>
   );
 };

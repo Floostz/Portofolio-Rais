@@ -8,7 +8,7 @@ const Skills: Component = () => {
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express", "Django",  "RustC", "GraphQL", "REST API"]
+      skills: ["Node.js", "Express", "Django",  "RustC", "REST API"]
     },
     {
       title: "Database",
@@ -16,7 +16,7 @@ const Skills: Component = () => {
     },
     {
       title: "DevOps & Tools",
-      skills: ["Git", "Docker", "Kubernetes", "AWS", "Vercel", "Netlify"]
+      skills: ["Git",  "AWS", "Vercel", "Netlify"]
     }
   ];
 
