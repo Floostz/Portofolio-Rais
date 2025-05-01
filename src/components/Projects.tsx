@@ -5,6 +5,7 @@ import xirentVideo from '../assets/xirentp.mp4';
 import gambarUrai from '../assets/mockupurai.png';
 import gambarLaundry from '../assets/mockup.png';
 import gambarCalcu from '../assets/calcu.png';
+import bot from '../assets/bot.png';
 
 interface Project {
   id: number;
@@ -25,7 +26,7 @@ const Projects: Component = () => {
       description: "Aplikasi mobile untuk pemesanan tempat di warnet secara real-time, dilengkapi fitur pemilihan kursi, jadwal, dan sistem notifikasi. Aplikasi ini dibuat saat PSAJ (Penilaian Akhir Jenjang).",
       tech: ["React-native", "Rust", "After Effect", "Blender"],
       video: xirentVideo, // Langsung dari import
-      github: "https://github.com/yourusername/xiirent",
+      github: "https://github.com/Floostz/XIIRENT",
     },
   {
   id: 2,
@@ -54,6 +55,15 @@ const Projects: Component = () => {
       github: "https://github.com/Floostz/fawazcalcu",
       vercel: "https://fawazcalcu-ujak.vercel.app/",
     },
+    {
+      id: 5,
+      title: "Rais.Hack TriggerBots",
+      description: "Saya membuat triggerbot untuk game apapun yang penting ada outline enemy. Triggerbot ini secara otomatis menembak musuh begitu mereka terdeteksi di dalam area outline, memberikan keuntungan dalam situasi pertempuran. Dibuat dengan bahasa pemrograman Rust untuk memastikan performa yang cepat dan responsif.",
+      tech: ["Rust"],
+      image: bot,
+      github: "https://github.com/Floostz/Rais-Hack-TriggerBots"
+    }
+    
 
   ]);
 

@@ -56,7 +56,7 @@ const BackgroundCanvas: Component = () => {
       starContainer.appendChild(star);
     }
   };
-
+///
   return (
     <div class="webgl-background">
       <div class="stars-container"></div>
