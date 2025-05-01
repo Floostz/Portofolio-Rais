@@ -2,7 +2,7 @@ import { Component, createSignal } from 'solid-js';
 
 
 import xirentVideo from '../assets/xirentp.mp4';
-import gambarUrai from '../assets/calcu.png';
+import gambarUrai from '../assets/mockupurai.png';
 import gambarLaundry from '../assets/mockup.png';
 import gambarCalcu from '../assets/calcu.png';
 
@@ -22,20 +22,21 @@ const Projects: Component = () => {
     {
       id: 1,
       title: "XIIRENT (Applikasi Booking Warnet)",
-      description: "Aplikasi mobile untuk pemesanan tempat di warnet secara real-time, dilengkapi fitur pemilihan kursi, jadwal, dan sistem notifikasi.",
+      description: "Aplikasi mobile untuk pemesanan tempat di warnet secara real-time, dilengkapi fitur pemilihan kursi, jadwal, dan sistem notifikasi. Aplikasi ini dibuat saat PSAJ (Penilaian Akhir Jenjang).",
       tech: ["React-native", "Rust", "After Effect", "Blender"],
       video: xirentVideo, // Langsung dari import
       github: "https://github.com/yourusername/xiirent",
     },
-    {
-      id: 2,
-      title: "URAI",
-      description: "Platform digital untuk mengelola sampah secara terorganisir dan meningkatkan kesadaran lingkungan.",
-      tech: ["Solid-js", "CSS", "Firebase", "After Effect"],
-      image: gambarUrai,
-      github: "https://github.com/yourusername/urai",
-      vercel: "https://uraiix.vercel.app",
-    },
+  {
+  id: 2,
+  title: "URAI",
+  description: "Platform digital untuk mengelola sampah secara terorganisir dan meningkatkan kesadaran lingkungan. Website ini dibuat saat saya PKL di Braincode Solution.",
+  tech: ["Solid-js", "CSS", "Firebase"],
+  image: gambarUrai,
+  github: "https://github.com/Floostz/URAI",
+  vercel: "https://urai-two.vercel.app/",
+}
+,
     {
       id: 3,
       title: "Laundry Management-APP",
@@ -52,7 +53,8 @@ const Projects: Component = () => {
       image: gambarCalcu,
       github: "https://github.com/Floostz/fawazcalcu",
       vercel: "https://fawazcalcu-ujak.vercel.app/",
-    }
+    },
+
   ]);
 
   return (
