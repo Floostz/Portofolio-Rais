@@ -1,5 +1,15 @@
 import { Component, onMount } from 'solid-js';
 
+// Import gambar sebagai modul
+import tsIcon from '../assets/ts.png';
+import reactIcon from '../assets/react.png';
+import postgresIcon from '../assets/postger.png';
+import nodeIcon from '../assets/node-js.png';
+import htmlIcon from '../assets/html.png';
+import rustIcon from '../assets/rust2.png';
+import solidIcon from '../assets/Solid.js.png';
+import blackholeWebm from '../assets/blackhole.webm';
+
 const BackgroundCanvas: Component = () => {
   onMount(() => {
     setupBackground();
@@ -7,15 +17,15 @@ const BackgroundCanvas: Component = () => {
 
   const setupBackground = () => {
     const techIcons = [
-      { src: "/assets/ts.png", top: "20%", left: "85%", size: 80 },
-      { src: "/assets/react.png", top: "35%", left: "80%", size: 70 },
-      { src: "/assets/postger.png", top: "55%", left: "75%", size: 60 },
-      { src: "/assets/node-js.png", top: "30%", left: "65%", size: 55 },
-      { src: "/assets/html.png", top: "60%", left: "65%", size: 65 },
-      { src: "/assets/rust2.png", top: "70%", left: "75%", size: 70 },
-      { src: "/assets/Solid.js.png", top: "40%", left: "90%", size: 65 }
+      { src: tsIcon, top: "20%", left: "85%", size: 80 },
+      { src: reactIcon, top: "35%", left: "80%", size: 70 },
+      { src: postgresIcon, top: "55%", left: "75%", size: 60 },
+      { src: nodeIcon, top: "30%", left: "65%", size: 55 },
+      { src: htmlIcon, top: "60%", left: "65%", size: 65 },
+      { src: rustIcon, top: "70%", left: "75%", size: 70 },
+      { src: solidIcon, top: "40%", left: "90%", size: 65 }
     ];
-
+    
     const container = document.querySelector('.background-icons');
     if (!container) return;
 
@@ -51,11 +61,12 @@ const BackgroundCanvas: Component = () => {
     <div class="webgl-background">
       <div class="stars-container"></div>
       <div class="black-hole-container">
-        <video class="black-hole-video" autoplay loop muted playsinline>
-          <source src="/assets/blackhole.webm" type="video/webm" />
-          <source src="/assets/blackhole.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <video class="black-hole-video" autoplay loop muted playsinline>
+  <source src={blackholeWebm} type="video/webm" />
+
+  Your browser does not support the video tag.
+</video>
+
       </div>
       <div class="cosmic-effect"></div>
       <div class="background-icons"></div>
