@@ -20,7 +20,7 @@
   "dependencies": {
     "@solidjs/router": "^0.15.1",
     "@types/three": "^0.176.0",
-    "default-connector": "link:C:/Users/gefro/AppData/Local/pnpm/global/5/node_modules/dataconnect-generated/js/default-connector",
+    "dataconnect-generated": "file:C:/Users/gefro/AppData/Local/pnpm/global/5/node_modules/dataconnect-generated/js/default-connector",
     "firebase": "^11.6.1",
     "lucide-solid": "^0.503.0",
     "solid-js": "^1.9.5",
